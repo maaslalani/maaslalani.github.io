@@ -1,2 +1,0 @@
-# maaslalani
-My personal website.
