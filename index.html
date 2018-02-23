@@ -1,90 +1,28 @@
-<!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
   <title>Maas Lalani</title>
-
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/projects.css">
 </head>
 <body>
 
-  <!-- Header graphic -->
-  <header>
-    <img src="images/logo.svg">
-  </header>
+  <navigation-section>
+    <h1>Maas Lalani</h1>
+    <navigation-section-container>
+      <a target="_blank" href="https://github.com/Maaslalaniii"> projects 🛠️ </a>
+      <a target="_blank" href="./resume.pdf"> resume 📋 </a>
+      <a target="_blank" href="mailto:maas@live.ca"> contact 🙌</a>
+    </navigation-section-container>
+  </navigation-section>
 
-  <!-- Navigation side bar -->
-  <nav>
-    <ul>
-      <li class="active"><a href="#!">projects</a></li>
-      <li><a href="resume.html">resume</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </ul>
-  </nav>
+  <about-me>
+    Hi there! My name is <a target="_blank" href="https://www.linkedin.com/in/maaslalani/"><span class="dark-blue">Maas Lalani</span></a>, I am an aspiring software engineer 💻. I build websites and mobile applications in <span class="green">react and react-native</span>.
+    I love anything to do with coding, <span class="dark-blue">computer science</span>, and problem-solving. I also really love food 🍗... like a lot. Currently, I am a student at Victoria Park Collegiate Institute 🎓 graduating in 2018. When I am not coding, I am playing soccer, chess, or violin. At the moment, I am working on my app 📱 called <a target="_blank" href="https://github.com/Maaslalaniii/Lingado"><span class="green">Lingado</span></a>, check it out on github or be a <a target="_blank" href="https://expo.io/@maaslalaniii/Lingado"><span class="dark-blue">beta-tester</span></a> on expo!
+  </about-me>
 
-  <!-- Projects -->
-  <p-projects>
-    
-    <!-- Project #1: Hexanote -->
-    <p-project>
-      <p-title>Hexanote</p-title>
-      <p-description>
-        A note sharing and distribution service for IB students.
-      </p-description>
-      <p-technologies>
-        <p-technology class="css">css</p-technology>
-        <p-technology class="javascript">javascript</p-technology>
-      </p-technologies>
-    </p-project>
-    
-    <!-- Project #2: Lingado -->
-    <p-project>
-      <p-title>Lingado</p-title>
-      <p-description>
-        A networking app that allows you to connect instantly with others.
-      </p-description>
-      <p-technologies>
-        <p-technology class="react-native">react-native</p-technology>
-        <p-technology class="firebase">firebase</p-technology>
-        <p-technology class="oauth">oauth</p-technology>
-      </p-technologies>
-    </p-project>
-    
-    <!-- Project #3: Reap -->
-    <p-project>
-      <p-title>Reap</p-title>
-      <p-description>
-        Realtime emotion analysis for presenters during speeches, lectures, etc...
-      </p-description>
-      <p-technologies>
-        <p-technology class="django">django</p-technology>
-        <p-technology class="firebase">firebase</p-technology>
-        <p-technology class="react-native">react-native</p-technology>
-      </p-technologies>  
-    </p-project>
-
-    <!-- Project #4: What day is it? -->
-    <p-project>
-      <p-title>What day is it?</p-title>
-      <p-description>
-        A web and mobile app that lets VPCI students know their day's schedule.
-      </p-description>
-      <p-technologies>
-        <p-technology class="php">php</p-technology>
-        <p-technology class="mysql">mysql</p-technology>
-      </p-technologies>
-    </p-project>
-
-  </p-projects>
-
-  <!-- Github link footer -->
-  <footer>
-    <i class="fa fa-2x fa-github"></i>
-    <p>view more on github</p>
-  </footer>
-
+  <script src="scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  font-size: 16pt;
+  font-family: 'Playfair Display', serif;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+navigation-section {
+  text-align: center;
+}
+
+navigation-section-container {
+  display: flex;
+  justify-content: center;
+}
+
+navigation-section-container a {
+  color: #000;
+  border-bottom: 1px dotted #000;
+  padding-bottom: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+about-me {
+  display: block;
+  text-align: justify;
+  font-family: 'Fira Mono', monospace;
+  line-height: 2em;
+}
+
+about-me span {
+  cursor: pointer;
+  color: white;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+about-me .dark-blue {
+  background-color: #34495e;
+}
+
+about-me .green {
+  background-color: #2ecc71;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12pt;
+  }
+  about-me {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  about-me {
+    margin-top: 10%;
+  }
+}
