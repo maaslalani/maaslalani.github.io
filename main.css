@@ -7,6 +7,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
+  overflow: hidden;
 }
 
 h2 {
@@ -23,6 +24,11 @@ p {
 p span {
   font-weight: 600;
   font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 navigation-bar {
@@ -46,5 +52,15 @@ left-container {
 
 right-container {
   flex: 1;
-  position: relative;
+}
+
+grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+grid-item {
+  display: flex;
+  width: 20%;
+  height: 20vh;
 }
