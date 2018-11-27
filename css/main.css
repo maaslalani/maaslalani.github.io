@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700');
+
+:root {
+  --spacing: 30px;
+  --light: #FFF;
+  --dark: #000;
+}
+
+body {
+  font-family: 'Fira Mono', monospace;
+
+  display: flex;
+
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+body.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  padding: var(--spacing);
+}
+
+body.light a {
+  color: var(--dark);
+}
+
+body.dark a {
+  color: var(--light);
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  position: absolute;
+}
+
+.top-left,
+.top-right {
+  top: 0;
+}
+
+.bottom-left,
+.bottom-right {
+  bottom: 0;
+}
+
+.top-left,
+.bottom-left {
+  left: 0;
+}
+
+.top-right,
+.bottom-right {
+  right: 0;
+}
+
+#greeting {
+  font-size: 5em;
+}
