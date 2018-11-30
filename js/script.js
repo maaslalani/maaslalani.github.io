@@ -1,4 +1,4 @@
-const GREETINGS = ['Hello', 'Hey', 'Hi', 'Hola', 'Bonjour', 'Welcome']
+const GREETINGS = ['Hello', 'Hey', 'Hi', 'Hola', 'Bonjour', 'Welcome', '你好', 'ہیلو']
 
 // Display a random greeting
 document.getElementById('greeting').innerHTML = GREETINGS[Math.floor(Math.random() * GREETINGS.length)]
