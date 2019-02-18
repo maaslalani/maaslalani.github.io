@@ -44,7 +44,7 @@ left-container {
   padding-left: var(--spacing);
   padding-right: var(--spacing);
 
-  height: 100vh;
+  height: 200vh;
   flex: 1;
 }
 
@@ -82,6 +82,11 @@ h1 {
 
 a {
   text-decoration: none;
+  color: var(--dark);
+}
+
+a:hover {
+  border-bottom: 1px dotted var(--dark);
 }
 
 @media only screen and (max-width: 860px) {
