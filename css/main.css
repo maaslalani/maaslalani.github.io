@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto:300');
 
 :root {
-  --spacing: 30px;
-  --light: #FFF;
-  --dark: #000;
+  --spacing: 100px;
+  --spacing-tight: 50px;
+  --spacing-tighter: 25px;
+  --light: #FFFFFF;
+  --dark: #202020;
+  --title-size: 96px;
+  --body-size: 16px;
 }
 
 body {
-  font-family: 'Fira Mono', monospace;
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--body-size);
+  font-weight: 300;
+
+  line-height: 200%;
 
   display: flex;
 
@@ -17,58 +25,86 @@ body {
 
   justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 }
 
-body.dark {
+body .dark {
   background-color: var(--dark);
   color: var(--light);
 }
 
-body.light {
+body .light {
   background-color: var(--light);
   color: var(--dark);
 }
 
-a {
-  text-decoration: none;
-  padding: var(--spacing);
+
+left-container {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+
+  height: 100vh;
+  flex: 1;
 }
 
-body.light a {
-  color: var(--dark);
+right-container {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+
+  height: 100vh;
+  flex: 1;
+
+  overflow: scroll;
 }
 
-body.dark a {
-  color: var(--light);
-}
+left-container .profile {
+  height: 45%;
+  width: auto;
 
-.top-left,
-.top-right,
-.bottom-left,
-.bottom-right {
   position: absolute;
-}
-
-.top-left,
-.top-right {
-  top: 0;
-}
-
-.bottom-left,
-.bottom-right {
   bottom: 0;
 }
 
-.top-left,
-.bottom-left {
-  left: 0;
+p {
+  margin-top: var(--spacing-tighter);
+  margin-bottom: var(--spacing-tighter);
 }
 
-.top-right,
-.bottom-right {
-  right: 0;
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: var(--title-size);
+  padding-top: var(--spacing-tight);
+  padding-bottom: var(--spacing-tighter);
 }
 
-#greeting {
-  font-size: 5em;
+a {
+  text-decoration: none;
+}
+
+body .light a {
+  color: var(--dark);
+}
+
+body .dark a {
+  color: var(--light);
+}
+
+@media only screen and (max-width: 860px) {
+  left-container {
+    flex: 0;
+  }
+
+  left-container .profile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  left-container {
+    width: 20px;
+    display: none;
+  }
 }
