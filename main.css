@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: Times New Roman;
+  font-size: 14px;
+
+  user-select: none;
+}
+
+section {
+  min-height: 100vh;
+  max-height: 100vh;
+
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 16em;
+  opacity: 0.02;
+}
+
+p {
+  position: absolute;
+  font-size: 2em;
+}
+
+label {
+  position: absolute;
+  bottom: 5%;
+  font-size: 1.25em;
+}
+
+a {
+  margin: 0.25em;
+
+  color: #000;
+
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
+label a {
+  border: none;
+}
+
+model-viewer {
+  outline: 0;
+  min-height: 90vh;
+  min-width: 90vw;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 1em;
+    font-size: 22px;
+  }
+}
