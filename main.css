@@ -20,8 +20,12 @@ section {
 }
 
 h1 {
-  font-size: 16em;
-  opacity: 0.02;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 3em;
+  font-weight: normal;
 }
 
 p {
@@ -31,7 +35,7 @@ p {
 
 label {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   font-size: 1.25em;
 }
 
