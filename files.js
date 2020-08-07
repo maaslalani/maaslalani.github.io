@@ -1,4 +1,5 @@
-const ABOUT = `I'm maas.`;
+const ABOUT = `i have no idea what i am doing.
+\rim just making things up as i go.`;
 
 const CONTACT = `\rEmail:   maas@live.ca
 \rGithub:  @maaslalani

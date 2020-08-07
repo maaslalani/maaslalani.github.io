@@ -2,6 +2,8 @@ const PROMPT = '[maas@] $ ';
 
 let term = new Terminal({
   rows: 45,
+  fontSize: 18,
+  cursorBlink: true,
   theme: {
     selection: '#4C566A55',
     background: '#2E3440',

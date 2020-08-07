@@ -4,6 +4,10 @@ const commands = {
 };
 
 function ls(args) {
+  if (args.length == 1 && args[0] == '-1') {
+    term.writeln(Object.keys(files).join('\r\n'));
+    return;
+  }
   term.writeln(Object.keys(files).join(' '));
 }
 
