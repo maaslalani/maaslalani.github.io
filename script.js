@@ -24,7 +24,6 @@ let command = '';
 // TODO: Add boot sequence...
 
 term.onData(event => {
-  console.log(JSON.stringify(event));
   switch (event) {
     case '\r': // Enter
       execute(command);
@@ -73,7 +72,6 @@ term.onData(event => {
 function execute(command) {
   history.push(command);
   term.writeln('\r');
-  console.log(JSON.stringify(command));
   tokens = command.split(' ');
   switch (tokens[0]) {
     case 'ls':
