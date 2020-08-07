@@ -36,13 +36,13 @@ term.onData(event => {
       pointer = Math.max(pointer - 1, 0);
       term.write('\x1b[2K');
       term.write(`\r${PROMPT}${history[pointer] || ''}`)
-      command = history[pointer];
+      command = history[pointer] || '';
       break;
     case '\u000e': // Ctrl+N
       pointer = Math.min(pointer + 1, history.length);
       term.write('\x1b[2K');
       term.write(`\r${PROMPT}${history[pointer] || ''}`)
-      command = history[pointer];
+      command = history[pointer] || '';
       break;
     case '\u007F': // Backspace (DEL)
       if (term._core.buffer.x > PROMPT.length) {
