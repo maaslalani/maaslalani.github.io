@@ -1,8 +1,5 @@
 function format(string) {
-  console.log(JSON.stringify(string));
-  let formatted = string.replace(/\n/g, '\r\n');
-  console.log(JSON.stringify(formatted));
-  return formatted;
+  return string.replace('\n', '').replace(/\n/g, '\r\n');
 }
 
 const ABOUT = format(`
@@ -32,7 +29,6 @@ Visit https://producthunt.com/@maaslalaniii/made
 
 const README = format(`
 Welcome to my website.
-Try \`ls\` and \`cat\`.
 `);
 
 const files = {
