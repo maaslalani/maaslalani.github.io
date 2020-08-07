@@ -12,8 +12,7 @@ let term = new Terminal({
 term.open(document.getElementById('terminal'));
 term.focus();
 
-term.writeln('Under construction...');
-term.write(`\r\n${PROMPT}`);
+term.write(`\r${PROMPT}`);
 
 window.scrollTo(0, 0);
 
