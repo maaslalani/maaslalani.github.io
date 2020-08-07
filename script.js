@@ -75,7 +75,7 @@ function execute(command) {
   tokens = command.split(' ');
 
   if (commands[tokens[0]]) {
-    commands[tokens[0]](tokens);
+    commands[tokens[0]](tokens.slice(1));
   } else {
     term.writeln(`Command not found: ${command}`);
   }
