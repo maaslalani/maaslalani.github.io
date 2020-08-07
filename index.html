@@ -1,38 +1,18 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <title>Maas Lalani</title>
-
     <meta charset="UTF-8">
     <meta name="description" content="Personal Portfolio">
     <meta name="author" content="Maas Lalani">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
     <link rel="icon" type="image/png" href="favicon.ico" />
-
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+    <script src="node_modules/xterm/lib/xterm.js"></script>
   </head>
   <body>
-
-    <section>
-      <model-viewer
-        alt="A 3D model of an astronaut"
-        src="./assets/Unicorn.glb"
-        interaction-prompt="none"
-        auto-rotate
-        exposure="2"
-        camera-controls
-        preload>
-        <div slot="progress-bar"></div>
-      </model-viewer>
-
-      <h1>Software Developer at Shopify</h1>
-      <label>Augmented Reality / Virtual Reality</label>
-    </section>
-
+    <div id="terminal"></div>
+    <script src="./script.js"></script>
   </body>
 </html>
