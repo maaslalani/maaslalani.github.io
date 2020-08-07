@@ -35,13 +35,15 @@ term.onData(event => {
     case '\u0010': // Ctrl+P
       pointer = Math.max(pointer - 1, 0);
       term.write('\x1b[2K');
-      term.write(`\r${PROMPT}${history[pointer] || ''}`)
+      term.write(`\r${PROMPT}`);
+      term.write(history[pointer] || '')
       command = history[pointer] || '';
       break;
     case '\u000e': // Ctrl+N
       pointer = Math.min(pointer + 1, history.length);
       term.write('\x1b[2K');
-      term.write(`\r${PROMPT}${history[pointer] || ''}`)
+      term.write(`\r${PROMPT}`);
+      term.write(history[pointer] || '')
       command = history[pointer] || '';
       break;
     case '\u007F': // Backspace (DEL)
@@ -67,22 +69,14 @@ term.onData(event => {
   }
 });
 
-// TODO: Add commands
-
 function execute(command) {
   history.push(command);
   term.writeln('\r');
   tokens = command.split(' ');
-  switch (tokens[0]) {
-    case 'ls':
-      term.writeln('about.txt contact.txt resume.md README.md')
-      break;
-    case 'cat':
-      if (tokens.length > 1) {
-        term.writeln(tokens[1]);
-      }
-      break;
-    default:
-      term.writeln(`Command not found: ${command}`)
+
+  if (commands[tokens[0]]) {
+    commands[tokens[0]](tokens);
+  } else {
+    term.writeln(`Command not found: ${command}`);
   }
 }
