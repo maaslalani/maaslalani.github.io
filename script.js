@@ -1,9 +1,11 @@
-const PROMPT = '[maas@] $ ';
+const PROMPT = `${red('[')}${yellow('maas')}${green('@')}${red(']')} ${magenta('~')} $ `;
+const PROMPT_LENGTH = PROMPT.replace(/\u001b\[[\d;]+m/g, '').length;
 
 let term = new Terminal({
   cols: 100,
   rows: 45,
   fontSize: 18,
+  fontFamily: 'Menlo',
   cursorBlink: true,
   theme: {
     selection: '#4C566A55',
@@ -50,7 +52,7 @@ term.onData(event => {
       command = history[pointer] || '';
       break;
     case '\u007F': // Backspace (DEL)
-      if (term._core.buffer.x > PROMPT.length) {
+      if (term._core.buffer.x > PROMPT_LENGTH) {
         command = command.slice(0, -1);
         term.write('\b \b');
       }
