@@ -1,24 +1,39 @@
-const ABOUT = `i have no idea what i am doing.
-\rim just making things up as i go.`;
+function format(string) {
+  console.log(JSON.stringify(string));
+  let formatted = string.replace(/\n/g, '\r\n');
+  console.log(JSON.stringify(formatted));
+  return formatted;
+}
 
-const CONTACT = `\rEmail:   maas@live.ca
-\rGithub:  @maaslalani
-\rTwitter: @maaslalani`;
+const ABOUT = format(`
+i have no idea what i am doing.
+im just making things up as i go.
+`);
 
-const PROJECTS = `Visit https://producthunt.com/@maaslalaniii/made
-\r* JustFocus
-\r* RemoveVanityMetrics
-\r* Create A Signature
-\r* Final Grade Calculator
-\r* Founder Rewind
-\r* Mafia List
-\r* Hawkeye User Testing
-\r* Offset List
-\r* Hawkeye Access
-\r* size.link`;
+const CONTACT = format(`
+Email:   maas@live.ca
+Github:  @maaslalani
+Twitter: @maaslalani
+`);
 
-const README = `Welcome to my website.
-\rTry \`ls\` and \`cat\`.`;
+const PROJECTS = format(`
+Visit https://producthunt.com/@maaslalaniii/made
+* JustFocus
+* RemoveVanityMetrics
+* Create A Signature
+* Final Grade Calculator
+* Founder Rewind
+* Mafia List
+* Hawkeye User Testing
+* Offset List
+* Hawkeye Access
+* size.link
+`);
+
+const README = format(`
+Welcome to my website.
+Try \`ls\` and \`cat\`.
+`);
 
 const files = {
   'about.txt': ABOUT,

@@ -20,5 +20,5 @@ function cat(args) {
     term.writeln(`file not found: ${args[0]}`)
     return;
   }
-  term.writeln(files[args[0]]);
+  term.write(files[args[0]]);
 }
