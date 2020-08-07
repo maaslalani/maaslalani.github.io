@@ -1,6 +1,7 @@
 const PROMPT = '[maas@] $ ';
 
 let term = new Terminal({
+  cols: 100,
   rows: 45,
   fontSize: 18,
   cursorBlink: true,
@@ -11,6 +12,7 @@ let term = new Terminal({
   },
 });
 
+term.registerLinkMatcher(/https:\/\/\w+\.[^\s]*/, (event, uri) => window.open(uri, '_blank'));
 term.open(document.getElementById('terminal'));
 term.focus();
 
