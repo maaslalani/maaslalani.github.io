@@ -9,8 +9,8 @@ im just making things up as i go.
 
 const CONTACT = format(`
 Email:   maas@live.ca
-Github:  @maaslalani
-Twitter: @maaslalani
+Github:  https://github.com/maaslalani
+Twitter: https://twitter.com/maaslalani
 `);
 
 const PROJECTS = format(`
