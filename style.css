@@ -7,14 +7,6 @@ body {
 	margin: 0;
 
 	position: absolute;
-
-	left: 5vw;
-	top: 5vh;
-}
-
-.moveable:nth-child(2) {
-	left: 10vw;
-	top: 30rem;
 }
 
 description {
@@ -22,19 +14,21 @@ description {
 }
 
 #projects {
-	height: 30vh;
-	width: 50vw;
-
-	min-height: 400px;
-	min-width: 400px;
+	height: 25rem;
+	width: 35rem;
 
 	padding-bottom: 5rem;
 }
 
 #about {
-	height: 30vh;
-	width: 40vw;
+	width: 30rem;
+}
 
-	min-height: 400px;
-	min-width: 400px;
+#model {
+	height: 20rem;
+}
+
+#terminal {
+	height: 30rem;
+	width: 40rem;
 }
