@@ -29,6 +29,41 @@ description {
 }
 
 #terminal {
-	height: 30rem;
-	width: 40rem;
+	width: 30rem;
+	height: 20rem;
+}
+
+@media screen and (max-width: 600px) {
+	p, ul {
+		font-size: 12px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 14px;
+	}
+
+	#projects {
+		height: 15rem;
+		width: 20rem;
+
+		padding-bottom: 5rem;
+	}
+
+	#about {
+		width: 10rem;
+		height: 15rem;
+
+		padding-bottom: 5rem;
+	}
+
+	#model {
+		width: 10rem;
+		height: 10rem;
+	}
+
+	#terminal {
+		height: 10rem;
+		width: 15rem;
+	}
+
 }

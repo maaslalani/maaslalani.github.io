@@ -59,7 +59,7 @@ const PROMPT_LENGTH = PROMPT.replace(/\u001b\[[\d;]+m/g, '').length;
 let term = new Terminal({
 	cols: 100,
 	rows: 45,
-	fontSize: 18,
+	fontSize: 16,
 	fontFamily: 'Inconsolata,Menlo,Chicago,Geneva',
 	cursorBlink: true,
 	theme: {
@@ -72,8 +72,6 @@ let term = new Terminal({
 
 term.registerLinkMatcher(/https:\/\/\w+\.[^\s]*/, (event, uri) => window.open(uri, '_blank'));
 term.open(document.querySelector('#terminal > .modeless-dialog'));
-term.focus();
-
 term.write(`\r${PROMPT}`);
 
 window.scrollTo(0, 0);
