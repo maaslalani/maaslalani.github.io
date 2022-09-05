@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.moveable {
+	margin: 0;
+
+	position: absolute;
+
+	left: 5vw;
+	top: 5vh;
+}
+
+.moveable:nth-child(2) {
+	left: 10vw;
+	top: 30rem;
+}
+
+description {
+	color: #BBB;
+}
+
+#projects {
+	height: 30vh;
+	width: 50vw;
+
+	min-height: 400px;
+	min-width: 400px;
+
+	padding-bottom: 5rem;
+}
+
+#about {
+	height: 30vh;
+	width: 40vw;
+
+	min-height: 400px;
+	min-width: 400px;
+}

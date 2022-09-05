@@ -1,9 +1,0 @@
-body {
-  padding: 4px;
-  margin: 0;
-  background-color: #2E3440;
-  overflow: hidden;
-}
-::-webkit-scrollbar {
-  display: none;
-}

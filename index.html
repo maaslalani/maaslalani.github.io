@@ -1,21 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Maas Lalani</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal Portfolio">
-    <meta name="author" content="Maas Lalani">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <link rel="icon" type="image/png" href="favicon.ico" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="./term/xterm.css" />
-    <script src="./term/xterm.js"></script>
-  </head>
-  <body>
-    <div id="terminal"></div>
-    <script src="./util/color.js"></script>
-    <script src="./util/files.js"></script>
-    <script src="./src/commands.js"></script>
-    <script src="./src/script.js"></script>
-  </body>
+    <head>
+        <title>Maas Lalani</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <ul role="menu-bar">
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+                &lt;&gt;
+                <ul role="menu">
+                    <li role="menu-item"><a href="#terminal">Terminal</a></li>
+                    <li role="menu-item"><a href="https://github.com/maaslalani/maaslalani.github.io">View Source</a></li>
+                </ul>
+            </li>
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+                About
+                <ul role="menu">
+                    <li role="menu-item" class="divider"><a href="#me">Me</a></li>
+                    <li role="menu-item"><a href="#resume">Resume</a></li>
+                    <li role="menu-item"><a href="https://maaslalani.com/blog" target="_blank">Blog</a></li>
+                </ul>
+            </li>
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Contact
+                <ul role="menu">
+                    <li role="menu-item"><a href="mailto:maas@lalani.dev" target="_blank">Email</a></li>
+                    <li role="menu-item"><a href="https://twitter.com/maaslalani" target="_blank">Twitter</a></li>
+                    <li role="menu-item"><a href="https://github.com/maaslalani" target="_blank">GitHub</a></li>
+                </ul>
+            </li>
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Projects
+                <ul role="menu">
+                    <li role="menu-item"><a href="https://github.com/maaslalani/slides" target="_blank">Slides</a></li>
+                    <li role="menu-item"><a href="https://github.com/maaslalani/gambit" target="_blank">Gambit</a></li>
+                    <li role="menu-item"><a href="https://github.com/maaslalani/draw" target="_blank">Draw</a></li>
+                    <li role="menu-item"><a href="https://github.com/maaslalani/confetty" target="_blank">Confetty</a></li>
+                    <li role="menu-item"><a href="https://github.com/maaslalani/twttr" target="_blank">Twttr</a></li>
+                    <li role="menu-item" class="divider"></li>
+                    <li role="menu-item"><a href="https://size.link" target="_blank">Size Link</a></li>
+                    <li role="menu-item"><a href="https://projectfolded.com" target="_blank">Project Folded</a></li>
+                    <li role="menu-item" class="divider"></li>
+                    <li role="menu-item"><a href="https://chrome.google.com/webstore/detail/just-focus/gefaddaengbodpiobpbgblajdboalmgc" target="_blank">Just Focus</a></li>
+                    <li role="menu-item"><a href="https://www.producthunt.com/products/remove-vanity-metrics" target="_blank">Remove Vanity Metrics</a></li>
+                    <li role="menu-item"><a href="https://www.producthunt.com/products/founder-rewind" target="_blank">Founder Rewind</a></li>
+                    <li role="menu-item"><a href="https://www.producthunt.com/products/mafia-list" target="_blank">Mafia List</a></li>
+                    <li role="menu-item"><a href="https://www.producthunt.com/products/offset-list" target="_blank">Offset List</a></li>
+                    <li role="menu-item" class="divider"></li>
+                    <li role="menu-item"><a href="https://usehawkeye.com" target="_blank">Hawkeye User Testing</a></li>
+                    <li role="menu-item"><a href="https://usehawkeye.com/access" target="_blank">Hawkeye Access</a></li>
+                </ul>
+            </li>
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Work
+                <ul role="menu">
+                    <li role="menu-item"><a href="https://charm.sh" target="_blank">Charm</a></li>
+                    <li role="menu-item" class="divider"></li>
+                    <li role="menu-item"><a href="https://locket.camera" target="_blank">Locket Camera</a></li>
+                    <li role="menu-item"><a href="https://shopify.com" target="_blank">Shopify</a></li>
+                    <li role="menu-item"><a href="https://usehawkeye.com" target="_blank">Hawkeye</a></li>
+                    <li role="menu-item"><a href="https://lendingloop.ca" target="_blank">Lending Loop</a></li>
+                </ul>
+            </li>
+            <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Patents
+                <ul role="menu">
+                    <li role="menu-item"><a href="https://patents.google.com/?inventor=Maas+Lalani" target="_blank">Applications (2)</a></li>
+                    <li role="menu-item"><a href="https://patentimages.storage.googleapis.com/a7/72/5c/49706184ffa147/US11398079.pdf" target="_blank">Published (1)</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div id="projects" class="window moveable">
+            <div class="title-bar"> 
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">Projects</h1>
+                <button aria-label="Resize" class="resize"></button>
+            </div>
+            <div class="separator"></div>
+
+            <div class="window-pane">
+                <h3>Command Line Tools</h3>
+                <ul>
+                    <li>Slides <description>Presentations in your terminal</description></li>
+                    <li>Gambit <description>Play chess in your terminal</description></li>
+                    <li>Draw <description>Draw in your terminal</description></li>
+                    <li>Confetty <description>Confetti in your TTY</description></li>
+                    <li>Twttr <description>Browse twitter in your terminal</description></li>
+                </ul>
+
+                <h3>Augmented Reality</h3>
+                <ul>
+                    <li>Size Link <description>Visualize dimensions in Augmented Reality</description></li>
+                </ul>
+
+                <h3>Products</h3>
+                <ul>
+                    <li>Project Folded <description>Send origami to loved ones</description></li>
+                    <li>Just Focus <description>Block distracting websites</description></li>
+                    <li>Remove Vanity Metrics <description>Hide metrics on Twitter</description></li>
+                    <li>Founder Rewind <description>Old interviews with founders</description></li>
+                    <li>Mafia List <description>Companies founded by X-Company employees</description></li>
+                    <li>Offset List <description>Companies that offset carbon emissions</description></li>
+                </ul>
+
+                <h3>Hawkeye</h3>
+                <ul>
+                    <li>Testing <description>Learn where people look in your apps</description></li>
+                    <li>Access <description>Use your iPhone with only your eyes</description></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="about" class="window moveable">
+            <div class="title-bar"> 
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">Maas Lalani</h1>
+                <button aria-label="Resize" class="resize"></button>
+            </div>
+            <div class="separator"></div>
+
+            <div class="window-pane">
+                <p>
+                Hi there, I'm Maas! I build software for fun and for a living.
+                I love open-source software and command-line interfaces.
+                </p>
+                <p>
+                Currently, I work on Developer Tools at <a href="https://charm.sh">Charm</a>.
+                </p>
+                <p>
+                In the past, I've worked at <a href="https://shopify.com">Shopify</a> on Developer Tooling, Infrastructure Security, and Augmented / Virtual Reality.
+                </p>
+                <p>
+                Reach out at <a href="mailto:maas@lalani.dev>maas@lalani.dev">maas@lalani.dev</a> or <a href="https://twitter.com/maaslalani">@maaslalani</a>.
+                </p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
 </html>
