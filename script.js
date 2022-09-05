@@ -1,9 +1,4 @@
-// Dragging
-
-let target = null,
-	isMouseDown = false,
-	offset = [0, 0];
-
+let target = null, isMouseDown = false, offset = [0, 0];
 const {innerWidth, innerHeight} = window;
 
 function random(min, max) {
@@ -11,42 +6,61 @@ function random(min, max) {
 }
 
 document.querySelectorAll('.moveable').forEach(el => {
-	el.style.top = random(0, innerHeight - el.offsetHeight) + 'px';
-	el.style.left = random(0, innerWidth - el.offsetWidth) + 'px';
-
-	el.addEventListener('mousedown', (e) => {
-		el.style.zIndex = getHighestZIndex() + 1;
-	}, true);
-
-	el.querySelector('.title-bar').addEventListener('mousedown', (e) => {
-		isMouseDown = true;
-		target = e.target.parentNode;
-		offset = [target.offsetLeft - e.clientX, target.offsetTop - e.clientY];
-	}, true);
+	el.style.top = random(30, innerHeight - el.offsetHeight) + 'px';
+	el.style.left = random(5, innerWidth - el.offsetWidth) + 'px';
+	el.addEventListener('mousedown', mouseDown(el), true);
+	el.addEventListener('touchstart', mouseDown(el), true);
+	el.querySelector('.title-bar').addEventListener('mousedown', titleMouseDown, true);
+	el.querySelector('.title-bar').addEventListener('touchstart', titleMouseDown, true);
 });
 
-document.addEventListener('mouseup', function(event) {
+document.addEventListener('mouseup', mouseUp, true);
+document.addEventListener('touchend', mouseUp, true);
+document.addEventListener('mousemove', mouseMove, true);
+document.addEventListener('touchmove', mouseMove, { passive: false });
+
+function mouseDown(el) {
+	return function(e) {
+		el.style.zIndex = getHighestZIndex() + 1;
+	}
+}
+
+function titleMouseDown(e) {
+	isMouseDown = true;
+	target = e.target.parentNode;
+	offset = [target.offsetLeft - eventClientX(e), target.offsetTop - eventClientY(e)];
+}
+
+function mouseUp(e) {
 	isMouseDown = false;
 	offset = [0, 0];
 	target = null;
-}, true);
+}
 
-document.addEventListener('mousemove', function(event) {
-	event.preventDefault();
+function mouseMove(e) {
 	if (!isMouseDown) {
 		return
 	}
-	const { clientX, clientY } = event;
-	target.style.left = (clientX + offset[0]) + 'px';
-	target.style.top  = (clientY + offset[1]) + 'px';
-}, true);
+	e.preventDefault();
+	target.style.left = (eventClientX(e) + offset[0]) + 'px';
+	target.style.top  = (eventClientY(e) + offset[1]) + 'px';
+}
 
 function getHighestZIndex() {
 	let highest = 0;
 	document.querySelectorAll('.moveable').forEach((el) => {
-		if (el.style.zIndex > highest) {
-			highest = el.style.zIndex;
+		const zIndex = parseInt(el.style.zIndex);
+		if (zIndex > highest) {
+			highest = zIndex;
 		}
 	});
-	return parseInt(highest);
+	return highest;
+}
+
+function eventClientX(e) {
+	return e.clientX || e.touches[0].clientX;
+}
+
+function eventClientY(e) {
+	return e.clientY || e.touches[0].clientY;
 }
