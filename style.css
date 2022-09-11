@@ -14,17 +14,26 @@ a {
 	text-decoration: none;
 }
 
+ul {
+	padding-left: 1em;
+}
+
+li {
+	line-height: 1.5em;
+}
+
 a:hover {
-	text-decoration: underline;
+	border-bottom: 1px dotted #000;
 }
 
 description {
 	color: #BBB;
+	font-size: 0.9em;
 }
 
 #projects {
 	height: 25rem;
-	width: 35rem;
+	width: 32.5rem;
 
 	padding-bottom: 5rem;
 }
