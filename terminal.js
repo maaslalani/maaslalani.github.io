@@ -38,7 +38,7 @@ function ls(args) {
 }
 
 function help(args) {
-	term.writeln(`\r\nAvailable commands:\r\n* ${Object.keys(commands).join('\r\n* ')}`);
+	term.writeln(`Commands:\r\n* ${Object.keys(commands).join('\r\n* ')}`);
 }
 
 function cat(args) {
@@ -57,9 +57,9 @@ const PROMPT = `$ `;
 const PROMPT_LENGTH = PROMPT.replace(/\u001b\[[\d;]+m/g, '').length;
 
 let term = new Terminal({
-	cols: 100,
-	rows: 45,
-	fontSize: 16,
+	cols: 80,
+	rows: 15,
+	fontSize: 15,
 	fontFamily: 'Inconsolata,Menlo,Chicago,Geneva',
 	cursorBlink: true,
 	theme: {
@@ -136,6 +136,6 @@ function execute(command) {
 	if (commands[tokens[0]]) {
 		commands[tokens[0]](tokens.slice(1));
 	} else {
-		term.writeln(`Command not found: ${command}`);
+		term.writeln(`shell: command not found: ${command}. Try 'help' to get started.`);
 	}
 }

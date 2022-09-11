@@ -38,7 +38,7 @@ description {
 }
 
 #terminal {
-	width: 30rem;
+	width: 35rem;
 	height: 20rem;
 }
 
@@ -68,7 +68,7 @@ description {
 
 	#terminal {
 		height: 15rem;
-		width: 15rem;
+		width: 22.5rem;
 	}
 
 	.hide {
